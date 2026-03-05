@@ -1,7 +1,7 @@
 # 🔥 OpenClaw 每日情报简报
 
 **日期**: 2026-03-05  
-**生成时间**: 16:33 UTC  
+**生成时间**: 16:36 UTC  
 **今日搜索词**: OpenClaw AI agent
 
 ---
@@ -32,11 +32,8 @@
 **影响力**: 👍 0 | 🔄 0
 
 **内容摘要**:
-> Markdown Content:
-[AWS News Blog](https://aws.amazon.com/blogs/aws/)
---------------------------------------------------
-[![Image 1: Voiced by Polly](https://a0.awsstatic.com/aws-blog/images/Voiced_by_Amazon_Polly_EN.png)](https://aws.amazon.com/polly/)
-Today, we’re announcing the general availability of [OpenClaw](https://openclaw.ai/) on [Amazon Lightsail](https://aws.amazon.com/lightsail/?trk=d8...
+> OpenClaw is an open-source self-hosted autonomous private AI agent that acts as a personal digital assistant by running directly on your computer. You can run AI agents on OpenClaw through your browser to connect to messaging apps like WhatsApp, Discord, or Telegram to perform tasks such as managing emails, browsing the web, and organizing files, rather than just answering questions.
+So, let me in...
 
 ---
 
@@ -46,14 +43,12 @@ Today, we’re announcing the general availability of [OpenClaw](https://opencla
 **影响力**: 👍 0 | 🔄 0
 
 **内容摘要**:
-> Markdown Content:
-Researchers Find 40,000+ Exposed OpenClaw Instances - Infosecurity Magazine
-===============
-[](https://www.infosecurity-magazine.com/)
-*   [Log In](https://www.infosecurity-magazine.com/my-account/login/)
-*   [Sign Up](https://www.infosecurity-magazine.com/my-account/login/)
-*   [News](https://www.infosecurity-magazine.com/news/)
-*   [Magazine Features](https://www.infosecurity-m...
+> Researchers Find 40,000+ Exposed OpenClaw Instances - Infosecurity Magazine
+*   Events Events & Conferences
+Researchers Find 40,000+ Exposed OpenClaw Instances
+UK / EMEA News Reporter, Infosecurity Magazine
+*   [Email Phil](mailto:phil@pmmediauk.com?subject=Email%20from%20Infosecurity%20Magazine%20website)
+Widespread misconfiguration of popular AI assistant OpenClaw means many instances are expose...
 
 ---
 
@@ -63,8 +58,7 @@ Researchers Find 40,000+ Exposed OpenClaw Instances - Infosecurity Magazine
 **影响力**: 👍 0 | 🔄 0
 
 **内容摘要**:
-> Markdown Content:
-[![Image 1: Clawdbot Just Took a Wild Turn: OpenClaw's Creator Joins OpenAI](https://blogger.googleusercontent.com/img/a/AVvXsEgjCq3jxXDUPZu8qJ33A8bWVS3iKH47tXbw2YtZ1RKdOayK4JDrAC1H-Obb5O3hMLMsJkxiinCf9RSvlJEQvHv0PHi-r8dYbJmeL9B2U8Gl-wEUokdtpdRxCl2glKKzHZVzgxjmVhux3bEdEhTceVa-4iz--4TZRctyXgBefJtq_jM1zRoE0gDb1U_fuHUI=w704-h394-p-k-no-nu)](https://blogger.googleusercontent.com/img/...
+> If you blinked, you probably missed how fast **Clawdbot** went from a nerdy side project to a move that might reshape what "personal agents" look like inside mainstream products. Over one weekend, the story swerved hard: the developer behind the project (now called OpenClaw) is heading to OpenAI, and the open-source project is getting pushed into a foundation so it can keep growing out in the open...
 
 ---
 
@@ -72,7 +66,6 @@ Researchers Find 40,000+ Exposed OpenClaw Instances - Infosecurity Magazine
 ## 💡 行动建议
 
 - 🔒 **安全检查**: 如部署 OpenClaw，立即检查防火墙和 API Key 配置
-- ☁️ **评估 AWS**: 考虑使用 Lightsail 镜像简化部署
 - 📊 **持续监控**: 每日查看情报简报
 
 ---
