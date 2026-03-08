@@ -246,30 +246,40 @@ def mock_llm(prompt: str) -> str:
     # Simple heuristic-based mock
     lower_prompt = prompt.lower()
     
-    # Check for attack patterns
+    # Check for attack patterns (only in the actual text being analyzed, not the system prompt)
+    # Look for the text between "---BEGIN TEXT---" and "---END TEXT---"
+    import re
+    text_match = re.search(r'---BEGIN TEXT---\s*(.*?)\s*---END TEXT---', prompt, re.DOTALL)
+    if text_match:
+        analyzed_text = text_match.group(1).lower()
+    else:
+        analyzed_text = lower_prompt
+    
+    # Attack patterns to detect
     attack_patterns = [
-        'ignore previous',
-        'ignore all prior',
-        'system:',
-        'you are now',
-        'jailbreak',
-        'dan mode',
-        'do anything now'
+        ('ignore previous', 'INSTRUCTION_OVERRIDE'),
+        ('ignore all prior', 'INSTRUCTION_OVERRIDE'),
+        ('disregard', 'INSTRUCTION_OVERRIDE'),
+        ('system:', 'ROLE_HIJACKING'),
+        ('you are now', 'ROLE_HIJACKING'),
+        ('you are in', 'ROLE_HIJACKING'),
+        ('jailbreak', 'CODE_INJECTION'),
+        ('dan mode', 'CODE_INJECTION'),
+        ('do anything now', 'CODE_INJECTION'),
+        ('developer mode', 'ROLE_HIJACKING'),
+        ('audit mode', 'ROLE_HIJACKING'),
+        ('no restrictions', 'CODE_INJECTION'),
+        ('unfiltered', 'CODE_INJECTION'),
     ]
     
     score = 0
-    categories = []
+    categories = set()
     evidence = []
     
-    for pattern in attack_patterns:
-        if pattern in lower_prompt:
-            score += 25
-            if 'ignore' in pattern:
-                categories.append('INSTRUCTION_OVERRIDE')
-            elif 'system' in pattern or 'you are' in pattern:
-                categories.append('ROLE_HIJACKING')
-            elif 'jailbreak' in pattern or 'dan' in pattern:
-                categories.append('CODE_INJECTION')
+    for pattern, category in attack_patterns:
+        if pattern in analyzed_text:
+            score += 30
+            categories.add(category)
             evidence.append(f"Detected: '{pattern}'")
     
     score = min(100, score)
@@ -284,7 +294,7 @@ def mock_llm(prompt: str) -> str:
     return json.dumps({
         'score': score,
         'verdict': verdict,
-        'categories': categories if categories else ['NONE'],
+        'categories': list(categories) if categories else ['NONE'],
         'reasoning': f'Pattern-based detection found {len(evidence)} suspicious elements',
         'evidence': '; '.join(evidence) if evidence else 'No suspicious content detected'
     })

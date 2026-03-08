@@ -36,18 +36,20 @@ class OutboundGate:
         """Compile regex patterns for detection."""
         return {
             'secrets': [
-                # API Keys
-                (r'sk-[a-zA-Z0-9]{48}', 'OpenAI API Key'),
-                (r'AIza[0-9A-Za-z_-]{35}', 'Google API Key'),
-                (r'xai-[a-zA-Z0-9]{32}', 'xAI API Key'),
-                (r'xox[baprs]-[0-9]{10,13}-[0-9]{10,13}-[a-zA-Z0-9]{24}', 'Slack Token'),
-                (r'ghp_[a-zA-Z0-9]{36}', 'GitHub Personal Token'),
-                (r'[0-9]{9}:[a-zA-Z0-9_-]{35}', 'Telegram Bot Token'),
+                # API Keys - relaxed patterns for testing
+                (r'sk-[a-zA-Z0-9]{20,}', 'OpenAI API Key'),
+                (r'AIza[0-9A-Za-z_-]{20,}', 'Google API Key'),
+                (r'xai-[a-zA-Z0-9]{20,}', 'xAI API Key'),
+                (r'xox[baprs]-[0-9]{10,}', 'Slack Token'),
+                (r'ghp_[a-zA-Z0-9]{20,}', 'GitHub Personal Token'),
+                (r'[0-9]{9}:[a-zA-Z0-9_-]{20,}', 'Telegram Bot Token'),
                 # Generic patterns
-                (r'api[_-]?key["\']?\s*[:=]\s*["\']?[a-zA-Z0-9]{16,}', 'Generic API Key'),
-                (r'secret["\']?\s*[:=]\s*["\']?[a-zA-Z0-9]{16,}', 'Secret'),
-                (r'token["\']?\s*[:=]\s*["\']?[a-zA-Z0-9]{16,}', 'Token'),
-                (r'password["\']?\s*[:=]\s*["\'][^\s"\']{8,}', 'Password'),
+                (r'api[_-]?key["\']?\s*[:=]\s*["\']?[a-zA-Z0-9_-]{10,}', 'Generic API Key'),
+                (r'secret["\']?\s*[:=]\s*["\']?[a-zA-Z0-9_-]{10,}', 'Secret'),
+                (r'token["\']?\s*[:=]\s*["\']?[a-zA-Z0-9_-]{10,}', 'Token'),
+                (r'password["\']?\s*[:=]\s*["\'][^\s"\']{6,}', 'Password'),
+                # Bearer token
+                (r'Bearer\s+[a-zA-Z0-9_\-\.]{10,}', 'Bearer Token'),
             ],
             'paths': [
                 (r'/[a-zA-Z0-9_/-]+\.(env|config|json|yaml|yml|key|pem|p12|pfx)', 'Config file path'),

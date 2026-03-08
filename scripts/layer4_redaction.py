@@ -51,77 +51,77 @@ class RedactionPipeline:
     def _build_rules(self) -> List[RedactionRule]:
         """Build redaction rules."""
         return [
-            # API Keys
+            # API Keys - relaxed patterns for broader detection
             RedactionRule(
                 'openai_api_key',
-                r'sk-[a-zA-Z0-9]{48}',
+                r'sk-[a-zA-Z0-9]{20,}',
                 '[OPENAI_API_KEY_REDACTED]',
                 'OpenAI API Key'
             ),
             RedactionRule(
                 'google_api_key',
-                r'AIza[0-9A-Za-z_-]{35}',
+                r'AIza[0-9A-Za-z_-]{20,}',
                 '[GOOGLE_API_KEY_REDACTED]',
                 'Google API Key'
             ),
             RedactionRule(
                 'xai_api_key',
-                r'xai-[a-zA-Z0-9]{32}',
+                r'xai-[a-zA-Z0-9]{20,}',
                 '[XAI_API_KEY_REDACTED]',
                 'xAI API Key'
             ),
             RedactionRule(
                 'slack_token',
-                r'xox[baprs]-[0-9]{10,13}-[0-9]{10,13}-[a-zA-Z0-9]{24}',
+                r'xox[baprs]-[0-9]{10,}',
                 '[SLACK_TOKEN_REDACTED]',
                 'Slack Token'
             ),
             RedactionRule(
                 'github_token',
-                r'ghp_[a-zA-Z0-9]{36}',
+                r'ghp_[a-zA-Z0-9]{20,}',
                 '[GITHUB_TOKEN_REDACTED]',
                 'GitHub Personal Token'
             ),
             RedactionRule(
                 'telegram_bot_token',
-                r'[0-9]{9}:[a-zA-Z0-9_-]{35}',
+                r'[0-9]{9}:[a-zA-Z0-9_-]{20,}',
                 '[TELEGRAM_BOT_TOKEN_REDACTED]',
                 'Telegram Bot Token'
             ),
             RedactionRule(
                 'aws_access_key',
-                r'AKIA[0-9A-Z]{16}',
+                r'AKIA[0-9A-Z]{10,}',
                 '[AWS_ACCESS_KEY_REDACTED]',
                 'AWS Access Key ID'
             ),
             RedactionRule(
                 'stripe_key',
-                r'sk_live_[0-9a-zA-Z]{24,}',
+                r'sk_live_[0-9a-zA-Z]{20,}',
                 '[STRIPE_KEY_REDACTED]',
                 'Stripe Live Key'
             ),
             # Generic patterns
             RedactionRule(
                 'generic_api_key',
-                r'(?i)(?:api[_-]?key|apikey)["\']?\s*[:=]\s*["\']?[a-zA-Z0-9_-]{16,}["\']?',
+                r'(?i)(?:api[_-]?key|apikey)["\']?\s*[:=]\s*["\']?[a-zA-Z0-9_-]{10,}["\']?',
                 '[API_KEY_REDACTED]',
                 'Generic API Key'
             ),
             RedactionRule(
                 'generic_secret',
-                r'(?i)(?:secret|private[_-]?key)["\']?\s*[:=]\s*["\']?[a-zA-Z0-9_-]{16,}["\']?',
+                r'(?i)(?:secret|private[_-]?key)["\']?\s*[:=]\s*["\']?[a-zA-Z0-9_-]{10,}["\']?',
                 '[SECRET_REDACTED]',
                 'Generic Secret'
             ),
             RedactionRule(
                 'password',
-                r'(?i)(?:password|passwd|pwd)["\']?\s*[:=]\s*["\'][^\s"\']{8,}["\']?',
+                r'(?i)(?:password|passwd|pwd)["\']?\s*[:=]\s*["\'][^\s"\']{6,}["\']?',
                 '[PASSWORD_REDACTED]',
                 'Password'
             ),
             RedactionRule(
                 'bearer_token',
-                r'Bearer\s+[a-zA-Z0-9_\-\.]+',
+                r'Bearer\s+[a-zA-Z0-9_\-\.]{10,}',
                 'Bearer [TOKEN_REDACTED]',
                 'Bearer Token'
             ),

@@ -114,16 +114,20 @@ class TextSanitizer:
     
     def _normalize_lookalikes(self, text: str) -> str:
         """Normalize lookalike characters to standard Latin."""
-        # Common lookalike mappings
+        # Common lookalike mappings (Cyrillic and other scripts that look like Latin)
         lookalikes = {
-            'а': 'a',  # Cyrillic а -> Latin a
-            'е': 'e',  # Cyrillic е -> Latin e
-            'о': 'o',  # Cyrillic о -> Latin o
-            'р': 'p',  # Cyrillic р -> Latin p
-            'с': 'c',  # Cyrillic с -> Latin c
-            'х': 'x',  # Cyrillic х -> Latin x
-            'і': 'i',  # Cyrillic і -> Latin i
-            'ј': 'j',  # Cyrillic ј -> Latin j
+            'а': 'a',  # Cyrillic а (U+0430) -> Latin a (U+0061)
+            'е': 'e',  # Cyrillic е (U+0435) -> Latin e (U+0065)
+            'о': 'o',  # Cyrillic о (U+043E) -> Latin o (U+006F)
+            'р': 'p',  # Cyrillic р (U+0440) -> Latin p (U+0070)
+            'с': 'c',  # Cyrillic с (U+0441) -> Latin c (U+0063)
+            'х': 'x',  # Cyrillic х (U+0445) -> Latin x (U+0078)
+            'і': 'i',  # Cyrillic і (U+0456) -> Latin i (U+0069)
+            'ј': 'j',  # Cyrillic ј (U+0458) -> Latin j (U+006A)
+            'ѕ': 's',  # Cyrillic ѕ (U+0455) -> Latin s (U+0073)
+            'у': 'y',  # Cyrillic у (U+0443) -> Latin y (U+0079)
+            'т': 't',  # Cyrillic т (U+0442) -> Latin t (U+0074)
+            'м': 'm',  # Cyrillic м (U+043C) -> Latin m (U+006D)
         }
         
         normalized = []
