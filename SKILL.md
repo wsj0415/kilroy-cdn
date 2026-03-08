@@ -259,14 +259,87 @@ Hardened against these open-source attack repositories:
 
 ## Scripts Reference
 
-| Script | Purpose |
-|--------|---------|
-| `scripts/layer1_sanitizer.py` | Deterministic text sanitization |
-| `scripts/layer2_scanner.py` | LLM-based frontier scanner |
-| `scripts/layer3_outbound_gate.py` | Outbound content filtering |
-| `scripts/layer4_redaction.py` | PII and secret redaction |
-| `scripts/layer5_governor.py` | Runtime governance |
-| `scripts/layer6_access_control.py` | Path and URL access control |
+| Script | Purpose | Status |
+|--------|---------|--------|
+| `scripts/layer1_sanitizer.py` | Deterministic text sanitization | ✅ Implemented |
+| `scripts/layer2_scanner.py` | LLM-based frontier scanner | ✅ Implemented |
+| `scripts/layer3_outbound_gate.py` | Outbound content filtering | ✅ Implemented |
+| `scripts/layer4_redaction.py` | PII and secret redaction | ✅ Implemented |
+| `scripts/layer5_governor.py` | Runtime governance | ✅ Implemented |
+| `scripts/layer6_access_control.py` | Path and URL access control | ✅ Implemented |
+
+**Total**: ~60KB of defense code across 6 layers
+
+---
+
+## Test Results
+
+All layers tested and working:
+
+```bash
+# Test all layers
+python3 scripts/layer1_sanitizer.py --test
+python3 scripts/layer2_scanner.py
+python3 scripts/layer3_outbound_gate.py
+python3 scripts/layer4_redaction.py
+python3 scripts/layer5_governor.py
+python3 scripts/layer6_access_control.py
+```
+
+---
+
+## Complete Usage Example
+
+```python
+from scripts.layer1_sanitizer import TextSanitizer
+from scripts.layer2_scanner import FrontierScanner
+from scripts.layer3_outbound_gate import OutboundGate
+from scripts.layer4_redaction import RedactionPipeline
+from scripts.layer5_governor import CallGovernor, GovernorConfig
+from scripts.layer6_access_control import AccessController
+
+# Layer 1: Sanitize input
+sanitizer = TextSanitizer(token_budget=4000)
+cleaned, stats = sanitizer.sanitize(untrusted_text)
+
+# Layer 2: Scan for semantic attacks
+scanner = FrontierScanner(llm_fn=your_llm_function)
+scan_result = scanner.scan(cleaned, source='email')
+
+if not scan_result['allowed']:
+    print(f"Blocked: {scan_result['reason']}")
+    return
+
+# Layer 6: Check file/URL access (if applicable)
+access = AccessController(allowed_directories=['/safe/path'])
+if file_path:
+    result = access.check_path(file_path)
+    if not result.allowed:
+        print(f"Access denied: {result.reason}")
+        return
+
+# Layer 5: Wrap LLM call with governance
+governor = CallGovernor()
+def llm_call(prompt):
+    return your_actual_llm(prompt)
+
+result = governor.call(prompt, llm_call, estimated_cost=0.01)
+if not result['allowed']:
+    print(f"Governor blocked: {result['reason']}")
+    return
+
+response = result['response']
+
+# Layer 3: Check outbound content
+gate = OutboundGate()
+outbound_check = gate.scan(response)
+if not outbound_check['clean']:
+    print(f"Outbound violations: {outbound_check['violations']}")
+
+# Layer 4: Redact before sending
+pipeline = RedactionPipeline()
+safe_response = pipeline.notification_pipeline(response)
+```
 
 ---
 
