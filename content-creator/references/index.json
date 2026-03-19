@@ -1,0 +1,130 @@
+{
+  "styles": [
+    {
+      "id": "news_share",
+      "name": "资讯分享型",
+      "description": "客观介绍，不编造体验",
+      "适用场景": ["新项目", "没时间实测", "基于公开信息"],
+      "核心原则": ["实事求是", "不编造体验", "有什么说什么"],
+      "模板文件": "templates/news_share.md",
+      "推荐指数": 5,
+      "默认推荐": true
+    },
+    {
+      "id": "real_review",
+      "name": "实战测评型",
+      "description": "真实体验，优缺点都说",
+      "适用场景": ["深度使用过", "有真实数据", "能说出优缺点"],
+      "核心原则": ["真实体验", "优缺点都说", "数据支撑"],
+      "模板文件": "templates/real_review.md",
+      "推荐指数": 4,
+      "使用条件": "必须真实使用过"
+    },
+    {
+      "id": "pain_point",
+      "name": "痛点解决型",
+      "description": "从痛点引出方案",
+      "适用场景": ["效率工具", "自动化类", "有明确痛点"],
+      "核心原则": ["共鸣强", "转化路径短", "效果对比清晰"],
+      "模板文件": "templates/pain_point.md",
+      "推荐指数": 4
+    },
+    {
+      "id": "comparison",
+      "name": "对比评测型",
+      "description": "多工具对比，帮助决策",
+      "适用场景": ["有竞品", "需要决策", "差异化明显"],
+      "核心原则": ["数据支撑", "客观公正", "帮助决策"],
+      "模板文件": "templates/comparison.md",
+      "推荐指数": 3
+    }
+  ],
+  "platforms": [
+    {
+      "id": "weitoutiao",
+      "name": "微头条",
+      "word_limit": "300-500",
+      "format": "每 2-3 句换行",
+      "tags": 10,
+      "cover_ratio": "16:9",
+      "best_time": "08:00-10:00 或 18:00-20:00",
+      "特点": "结论先行，痛点共鸣"
+    },
+    {
+      "id": "douyin",
+      "name": "抖音",
+      "word_limit": "60 秒脚本",
+      "format": "分镜头格式",
+      "tags": "8-10",
+      "cover_ratio": "9:16",
+      "best_time": "18:00-20:00",
+      "特点": "前 3 秒钩子，节奏快"
+    },
+    {
+      "id": "xiaohongshu",
+      "name": "小红书",
+      "word_limit": "800-1200",
+      "format": "emoji+ 分段",
+      "tags": "10-15",
+      "cover_ratio": "3:4",
+      "best_time": "12:00-14:00",
+      "特点": "封面吸睛，emoji 多"
+    },
+    {
+      "id": "bilibili",
+      "name": "B 站",
+      "word_limit": "1500+",
+      "format": "章节划分",
+      "tags": 8,
+      "cover_ratio": "16:9",
+      "best_time": "18:00-20:00",
+      "特点": "前 30 秒留人，深度内容"
+    },
+    {
+      "id": "wechat",
+      "name": "公众号",
+      "word_limit": "1500-3000",
+      "format": "深度内容",
+      "tags": "5-8",
+      "cover_ratio": "1:1",
+      "best_time": "20:00-22:00",
+      "特点": "标题党，长文深度"
+    }
+  ],
+  "cover_styles": [
+    {
+      "id": "bento_grid",
+      "name": "Bento Grid 信息图",
+      "description": "Apple 风格信息图，透明玻璃卡片",
+      "适用场景": ["专业感", "信息密度高", "科技感"],
+      "推荐平台": ["微头条", "B 站", "公众号"],
+      "prompt_template": "templates/covers/bento_grid.md",
+      "推荐指数": 5,
+      "默认推荐": true
+    },
+    {
+      "id": "product_photo",
+      "name": "科技产品摄影",
+      "description": "高端商业宣传图",
+      "适用场景": ["B 站/YouTube 封面", "视觉冲击力"],
+      "推荐平台": ["B 站", "YouTube"],
+      "prompt_template": "templates/covers/product_photo.md",
+      "推荐指数": 4
+    },
+    {
+      "id": "minimalist",
+      "name": "极简科技海报",
+      "description": "Apple 发布会 Keynote 风格",
+      "适用场景": ["小红书/Instagram", "传播性"],
+      "推荐平台": ["小红书", "Instagram"],
+      "prompt_template": "templates/covers/minimalist.md",
+      "推荐指数": 4
+    }
+  ],
+  "tag_presets": {
+    "ai_tools": ["人工智能", "AI 工具", "效率工具", "技术前沿", "自动化"],
+    "open_source": ["开源项目", "GitHub", "开发者", "程序员", "技术分享"],
+    "productivity": ["职场干货", "办公技巧", "时间管理", "不加班", "打工人"],
+    "coding": ["编程助手", "VSCode", "代码", "开发工具", "软件工程"]
+  }
+}
