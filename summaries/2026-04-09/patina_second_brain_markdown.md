@@ -294,275 +294,83 @@ Claude 读取你的文件，回答问题，并保持一切更新。
 
 ---
 
-## 🎨 封面图提示词
+## 🎨 封面图提示词（使用 nano-banana-pro）
 
-### 选项 1：系统架构图 ⭐ 推荐
+### 选项 1：系统架构图 — 技术蓝图风格 ⭐ 推荐
+
+**来源**: nano-banana-pro / Infographic / Edu Visual  
+**参考**: Technical Blueprint Drawing Prompt (ID: 11211)  
+**示例图**: https://cms-assets.youmind.com/media/1772433511864_no5yz9_HCU_ufcacAAZMH2.jpg
 
 ```prompt
-Create a vertical architecture infographic for "Patina — Second Brain in Markdown".
+Patina Second Brain system architecture, technical blueprint drawing, orthographic view, vertical flow diagram showing 3 layers (Apps → Markdown Folder → AI), white vector line art, thin construction lines, precise measurements, annotation labels, dimension arrows, grid background, deep blue background, minimal design, engineering schematic style, high detail, aspect ratio 9:16 portrait
 
-Title: "Patina 第二大脑"
-Subtitle: "Markdown 中的生活操作系统"
-Credit: "gabos.vercel.app"
+Layer 1 (Top): 20+ app icons (Gmail, Calendar, Beeper, Health, Finance) with sync arrows pointing down
+Layer 2 (Middle): Markdown folder structure with files (identity.md, people/, briefings/, digests/, weekly/)
+Layer 3 (Bottom): AI layer (Claude) with read/write arrows
 
-Layout: Vertical stack showing data flow from apps to AI.
-
-Color Palette:
-- Apps: Blue (#3B82F6)
-- Markdown: Green (#10B981)
-- AI: Purple (#8B5CF6)
-- Output: Orange (#F97316)
-- Background: Dark gradient (#0F172A to #1E293B)
-- Text: White and light gray
-
-Data Sources (Top):
-
-标题：📱 20+ 应用集成
-
-应用网格：
-┌──────┬──────┬──────┬──────┐
-│Gmail │Calendar│Beeper│Health│
-├──────┼──────┼──────┼──────┤
-│Finance│Messages│Notes │+14  │
-└──────┴──────┴──────┴──────┘
-
-Markdown Folder (Middle):
-
-标题：📁 本地 Markdown 文件夹
-
-文件结构：
-```
-your-folder/
-├── identity.md      # 身份档案
-├── people/          # 人物文件
-├── briefings/       # 早间简报
-├── digests/         # 每日摘要
-└── weekly/          # 每周检查
+Labels: "Connect Apps" → "Everything becomes .md" → "AI acts on it"
+Badge: "Private by Design" "Local Storage" "Full Control"
 ```
 
-特点：
-✅ 纯文本
-✅ 本地存储
-✅ 完全控制
+---
 
-AI Layer (Below):
+### 选项 2：Bento Grid 信息图风格
 
-标题：🤖 AI 层（Claude）
+**来源**: nano-banana-pro / Infographic / Edu Visual  
+**参考**: Premium liquid glass Bento grid (ID: 6847)  
+**示例图**: https://cms-assets.youmind.com/media/1768962051381_l9uih4_537980579-6f29d32a-c786-40c4-bd5a-79c640737496.png
 
-功能：
-- 读取文件
-- 回答问题
-- 保持更新
-- 不自主行动
+```prompt
+Input Variable: Patina Second Brain
+Language: Chinese
 
-原则：
-"只读写本地文件"
-"从不自发送消息"
+System Instruction:
+Create an image of premium liquid glass Bento grid infographic with 6 modules for Patina Second Brain system.
 
-Output (Bottom):
+1) Color Palette:
+→ Hero color: Soft blue (#3B82F6)
+→ Accents: Muted blue (30-40% saturation)
+→ Icons, borders: Whisper-thin borders, never black
 
-标题：📤 输出界面
+2) Visual Style:
+→ Cards: Apple liquid glass (85-90% transparent)
+→ Background: Ethereal abstract glow, light caustics
+→ Asymmetric Bento grid, 9:16 portrait
+→ Hero card: 28-30% | Info modules: 70-72%
 
-界面选项：
-- Sumi（移动端）
-- Patina for Mac（菜单栏）
-- Web（浏览器）
+3) Module Content (6 Cards):
+M1 — Hero: "Patina 第二大脑" title + Markdown folder icon
+M2 — Data Sources: 20+ apps (Gmail, Calendar, Beeper, Health)
+M3 — Storage: Local .md files, privacy badge
+M4 — AI Layer: Claude reads & answers
+M5 — Briefings: Morning/Daily/Weekly icons
+M6 — Output: Sumi mobile + Mac menu bar
 
-核心功能卡片：
-
-[早间简报] 🌅
-天气 + 日程 + 待回复
-
-[每日摘要] 🌙
-对话 + 会议 + 任务
-
-[每周检查] 📅
-展望 + 目标 + 延续线程
-
-成果徽章：
-"隐私优先设计"
-"完全可定制"
-"用户始终掌控"
-
-行动号召：
-"探索 Patina"
-"开始使用 →"
-
-Style:
-- 现代架构图
-- 暗黑模式配霓虹层
-- 清晰数据流可视化
-- 专业生产力工具美学
-
-Technical:
-- Aspect ratio: 9:16 portrait (1080x1920)
-- Resolution: Ultra HD
-- Style: Patina 系统架构图，暗黑模式
-- Mobile/social media optimized
-
-Output: 1 image, 9:16 vertical, Patina Second Brain architecture with apps→markdown→AI flow, dark mode with colorful layers.
+Output: 1 image, 9:16 portrait, ultra-premium liquid glass infographic.
 ```
+
+---
+
+### 选项 3：爆炸视图风格
+
+**来源**: nano-banana-pro / Infographic / Edu Visual  
+**参考**: Exploded View Infographic (ID: 11270)  
+**示例图**: https://cms-assets.youmind.com/media/1772519703684_klovml_HCbTfBgXQAAtlhh.jpg
+
+```prompt
+product design, Patina Second Brain system, exploded view diagram, white background, three-dimensional, highly detailed components showing data flow from apps to markdown files to AI layer, studio lighting, product photography, best quality, aspect ratio 9:16
+
+Top layer: App icons floating with sync arrows
+Middle layer: Markdown folder with visible files (identity.md, people/, briefings/)
+Bottom layer: AI (Claude) with read/write indicators
+
+Style: Clean technical illustration, minimal labels, professional educational infographic
+```
+
+---
 
 **适用场景**: 小红书、抖音、技术社区、GitHub
-
----
-
-### 选项 2：三层简报对比风格
-
-```prompt
-Create a vertical timeline "Patina Briefing System — 3 Layers".
-
-Title: "三层简报系统"
-Subtitle: "早/日/周完整覆盖"
-Credit: "Patina"
-
-Layout: Vertical timeline with 3 briefing types.
-
-Color Palette:
-- Morning: Yellow/Orange (#FBBF24)
-- Daily: Blue (#3B82F6)
-- Weekly: Purple (#8B5CF6)
-- Background: Clean white to light gray
-- Text: Dark charcoal
-
-3 Layers (top to bottom):
-
-[早间简报] 🌅
-时间：每天早上
-内容：
-- 天气预报
-- 当日日程
-- 开放循环
-- 需要回复的消息
-特点：交叉引用已处理事项
-
-[每日摘要] 🌙
-时间：每天晚上
-内容：
-- 所有对话记录
-- 会议摘要
-- 完成任务
-- 开放循环验证
-特点：附带检查日志
-
-[每周检查] 📅
-时间：周日晚上
-内容：
-- 完整周日程
-- 目标进度
-- 延续开放线程
-特点：周度反思
-
-Bottom Section:
-
-核心价值：
-✅ 不错过任何事
-✅ 始终有控制感
-✅ 隐私优先
-✅ 完全可定制
-
-数据流：
-应用 → Markdown → AI → 简报
-
-行动号召：
-"探索简报系统"
-"完整指南 →"
-
-Style:
-- 清晰时间线
-- 明亮背景
-- 彩色层
-- 专业生产力美学
-
-Technical:
-- Aspect ratio: 9:16 portrait (1080x1920)
-- Resolution: Ultra HD
-- Style: 三层简报时间线，明亮背景
-- Mobile/social media optimized
-
-Output: 1 image, 9:16 vertical, Patina 3-layer briefing system timeline, clean bright design.
-```
-
-**适用场景**: 教程指南、功能展示、生产力分享
-
----
-
-### 选项 3：隐私对比风格
-
-```prompt
-Create a vertical before/after "Cloud AI vs Local Markdown AI".
-
-Title: "隐私优先 AI"
-Subtitle: "你的数据，你的控制"
-Credit: "Patina Design"
-
-Layout: Split comparison - top (cloud) vs bottom (local).
-
-Color Palette:
-- Cloud: Red/gray (#EF4444)
-- Local: Green (#10B981)
-- Background: Dark gradient
-- Text: White
-
-Cloud AI (Top - Red):
-
-标题：❌ 云端 AI
-
-问题：
-- 数据发送到第三方服务器
-- 无法控制数据存储
-- 隐私政策可能变化
-- 供应商锁定风险
-
-可视化：
-用户 → [云端 AI] → 第三方服务器
-        ↓
-    数据不可控
-
-Local AI (Bottom - Green):
-
-标题：✅ 本地 Markdown AI
-
-方案：
-- 数据作为纯文本在本地
-- AI 只读/写本地文件
-- 从不自发送消息
-- 完全可定制
-
-可视化：
-用户 → [本地 AI] → 本地文件
-        ↓
-    完全控制
-
-底部对比：
-
-| 对比项 | 云端 | 本地 |
-|--------|------|------|
-| 数据存储 | 第三方 | 本地 ⭐ |
-| 隐私控制 | 有限 | 完全 ⭐ |
-| 可定制性 | 低 | 高 ⭐ |
-| 供应商锁定 | 是 | 否 ⭐ |
-
-行动号召：
-"探索隐私优先设计"
-"完整指南 →"
-
-Style:
-- 清晰前后对比
-- 上红下绿
-- 问题→解决方案视觉
-- 专业工具美学
-
-Technical:
-- Aspect ratio: 9:16 portrait (1080x1920)
-- Resolution: Ultra HD
-- Style: 隐私对比图，暗黑模式
-- Mobile/social media optimized
-
-Output: 1 image, 9:16 vertical, Cloud AI vs Local Markdown AI comparison, dark mode with red/green contrast.
-```
-
-**适用场景**: 隐私说明、技术对比、安全意识
 
 ---
 
