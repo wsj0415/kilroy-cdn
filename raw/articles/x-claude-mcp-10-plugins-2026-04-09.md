@@ -73,6 +73,116 @@
 
 ---
 
+## 🎨 封面图提示词（来自 nano-banana-pro 技能库）
+
+### 选项 1：Bento Grid 信息图风格 ⭐ 推荐
+
+**来源**: nano-banana-pro / Infographic / Edu Visual  
+**参考 ID**: 6847 (Premium liquid glass Bento grid)  
+**示例图**: https://cms-assets.youmind.com/media/1768962051381_l9uih4_537980579-6f29d32a-c786-40c4-bd5a-79c640737496.png
+
+```prompt
+Input Variable: 10 Claude MCP Plugins
+Language: Chinese
+
+System Instruction:
+Create an image of premium liquid glass Bento grid product infographic with 8 modules for "10 Claude MCP Plugins — AI Operating System".
+
+1) Product Analysis:
+→ Hero color: Purple (#8B5CF6) — AI/tech dominant
+→ Category: TECH / AI Software
+
+2) Color Palette (derived from hero):
+→ Product + accents: Full saturation purple
+→ Icons, borders: Muted purple (30-40% saturation, never black)
+→ Additional: Blue (#3B82F6) for contrast
+
+3) Visual Style:
+→ Hero: Stylized Claude brain icon + plugin arms
+→ Cards: Apple liquid glass (85-90% transparent)
+→ Background: Ethereal abstract glow, dark gradient
+→ Add subtle motion effect
+→ Asymmetric Bento grid, 9:16 portrait
+→ Hero card: 28-30% | Info modules: 70-72%
+
+4) Module Content (8 Cards):
+
+M1 — Hero:
+"10 个 Claude 插件"
+"从聊天机器人 → AI 操作系统"
+Icon: Brain + plugin arms
+
+M2 — Before/After:
+Before ❌: "Chat → Thinking"
+After ✅: "Plugins → Actions"
+
+M3 — Top Plugins (3 cards):
+Feature-Dev | Frontend-Design | Memory Bank
+"Senior Engineer" | "Fixes AI Look" | "持久记忆"
+
+M4 — Key Metrics:
+"1000+ MCP Servers"
+"351K+ Agent Skills"
+"Millions of Installs"
+
+M5 — Capabilities:
+"执行代码" | "查询数据库"
+"控制浏览器" | "读取 Slack"
+
+M6 — Who It's For:
+✅ Developers
+✅ Data Analysts
+✅ Content Creators
+⚠️ Not for basic chat users
+
+M7 — Quick Reference:
+Chat → Thinking
+Plugins → Actions
+Memory → Context
+
+M8 — Did You Know:
+"2026-02-24 Launch"
+"1000+ servers in 2 weeks"
+"Gap is getting bigger"
+
+Output: 1 image, 9:16 portrait, ultra-premium liquid glass infographic.
+```
+
+---
+
+### 选项 2：爆炸视图风格
+
+**来源**: nano-banana-pro / Infographic / Edu Visual  
+**参考 ID**: 11270 (Exploded View Infographic)  
+**示例图**: https://cms-assets.youmind.com/media/1772519703684_klovml_HCbTfBgXQAAtlhh.jpg
+
+```prompt
+product design, Claude MCP Plugins Architecture, exploded view diagram, white background, three-dimensional, highly detailed showing Claude brain in center with 10 plugin arms radiating outward, studio lighting, product photography, best quality, aspect ratio 9:16
+
+Center: Claude Brain icon with "MCP" label
+
+10 Plugin Arms (环绕):
+1. Feature-Dev — Code icon
+2. Frontend-Design — Paint brush icon
+3. Context7 — Document icon
+4. GitHub — GitHub logo
+5. PostgreSQL — Database icon
+6. Playwright — Browser icon
+7. Brave Search — Search icon
+8. Google Workspace — G Suite icons
+9. Slack — Slack logo
+10. Memory Bank — Memory chip icon
+
+Bottom Badge:
+"1000+ MCP Servers"
+"351K+ Agent Skills"
+"AI Operating System"
+
+Style: Clean technical illustration, minimal labels, professional educational infographic
+```
+
+---
+
 ## 新心智模型
 
 | 组件 | 功能 |
