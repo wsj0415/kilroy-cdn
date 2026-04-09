@@ -3,7 +3,114 @@
 **来源**: https://x.com/rohonchain/status/2041180375838498950  
 **抓取时间**: 2026-04-09 17:23 UTC  
 **类型**: X Article 长文  
-**标签**: quantitative-trading, signal-combination, hedge-fund, alpha-combination, prediction-markets, polymarket, information-coefficient, active-management-law, systematic-trading, kelly-formula
+**标签**: #量化交易 #信号组合 #对冲基金 #Alpha 组合 #预测市场 #Polymarket #信息系数 #主动管理定律 #系统交易 #Kelly 公式
+
+---
+
+## 📊 一句话总结
+
+对冲基金用主动管理基本定律（IR = IC × √N）将 50 个弱信号（IC 0.05）组合成比单个强信号（IC 0.10）强 3.5 倍以上的系统。关键不是找"永远正确"的信号，而是正确组合"每个都稍微正确"的信号。
+
+---
+
+## 🎨 封面图提示词（nano-banana-pro 技能库）
+
+### 选项 1：基本定律公式图 ⭐ 推荐
+
+**来源**: nano-banana-pro / Infographic / Edu Visual  
+**参考 ID**: 11257 (Infographic Style)  
+**示例图**: https://cms-assets.youmind.com/media/1772433527626_7jezbj_HCW2O1lX0AEnqu0.jpg
+
+```prompt
+Infographic-style image for "The Math Behind Combining 50 Weak Signals Into One Winning Trade".
+
+Title: "50 个弱信号 → 1 个赢家"
+Subtitle: "对冲基金的阿尔法组合数学"
+
+Layout: Vertical formula breakdown with visual comparison.
+
+Color Palette:
+- Formula: Purple (#8B5CF6)
+- Comparison: Blue vs Green
+- Background: Dark gradient (#0F172A to #1E293B)
+- Text: White
+
+Top Section - Fundamental Law:
+大公式展示：IR = IC × √N
+
+公式分解：
+IR → 信息比率（系统风险调整后收益）
+IC → 信息系数（信号预测准确度）
+N → 独立信号数量
+
+Middle Section - Math Comparison:
+
+左侧（单个强信号）:
+IC = 0.10, N = 1, IR = 0.10 × √1 = 0.10
+图标：单一大脑
+
+右侧（50 个弱信号）:
+IC = 0.05（一半强度）, N = 50, IR = 0.05 × √50 = 0.354
+图标：50 个小大脑连接，标签"3.5 倍更强"
+
+Bottom Section - 5 Signal Types:
+1. 价格动量 → 趋势持续
+2. 均值回归 → 相对定价
+3. 波动率 → 隐含 vs 实际
+4. 因子 → Fama-French 三因子
+5. 微观结构 → 订单流不平衡
+
+Badge: "机构 IC: 0.05-0.15" "550+ 公式研究" "11 步组合流程"
+
+Style: Modern mathematical infographic, dark mode with neon purple accents
+Aspect ratio: 9:16 portrait
+```
+
+---
+
+### 选项 2:11 步流程图
+
+**来源**: nano-banana-pro / Infographic / Edu Visual  
+**参考 ID**: 11165 (Technical Infographic Cutaway)  
+**示例图**: https://cms-assets.youmind.com/media/1772433492844_q6zr64_HCTasgQaYAADK5w.jpg
+
+```prompt
+Create a clean technical flowchart for "11-Step Alpha Combination Procedure".
+
+Title: "11 步阿尔法组合流程"
+Subtitle: "机构信号权重优化引擎"
+
+Layout: Vertical 11-step pipeline with 3 phases.
+
+Color Palette:
+- Phase 1: Blue (#3B82F6)
+- Phase 2: Purple (#8B5CF6)
+- Phase 3: Green (#10B981)
+- Background: Dark gradient
+- Text: White
+
+Phase 1 - Data Prep (Steps 1-5):
+S1: 收集历史收益序列 R(i,s)
+S2: 去除系统漂移（去均值）
+S3: 计算样本方差 σ(i)²
+S4: 标准化 Y(i,s) = X(i,s) / σ(i)
+S5: 保留 M 期（丢弃最新）
+
+Phase 2 - Independence (Steps 6-9):
+S6: 横截面去均值 Λ(i,s)
+S7: 保留 M-1 期
+S8: 计算预期 forward 收益 E(i)
+S9: 回归残差 ε(i) ← 关键步骤
+
+Phase 3 - Weighting (Steps 10-11):
+S10: 设置权重 w(i) = η × ε(i) / σ(i)
+S11: 归一化权重向量（总和=1）
+
+Output Badge: "Mega-Alpha" "单一高置信度输出" "来自 50 个弱信号"
+
+Style: Clean technical flowchart, dark mode with neon accents
+Aspect ratio: 9:16 portrait
+```
 
 ---
 
